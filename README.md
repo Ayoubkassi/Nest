@@ -1,4 +1,7 @@
 ## Kassi TRy Nest
+**Current App design**
+
+![Our app design](https://blog.ippon.fr/content/images/2019/06/image-10.png)
 
 **Some Useful Commands**
 
@@ -6,7 +9,7 @@
   ** Generate new controller
   ** > nest g controller controller_name
   ** run project
-  ** > npm run start:dev 
+  ** > npm run start:dev
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
