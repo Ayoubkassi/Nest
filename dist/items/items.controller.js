@@ -25,6 +25,9 @@ let ItemsController = class ItemsController {
     craeteNewPost(createItemDto) {
         return `Name : ${createItemDto.name} Desc : ${createItemDto.description}`;
     }
+    delete(id) {
+        return `Delete ${id}`;
+    }
 };
 __decorate([
     (0, common_1.Get)(),
@@ -46,6 +49,13 @@ __decorate([
     __metadata("design:paramtypes", [create_item_dto_1.CreateItemDto]),
     __metadata("design:returntype", String)
 ], ItemsController.prototype, "craeteNewPost", null);
+__decorate([
+    (0, common_1.Delete)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", String)
+], ItemsController.prototype, "delete", null);
 ItemsController = __decorate([
     (0, common_1.Controller)('items')
 ], ItemsController);
