@@ -16,9 +16,9 @@ exports.ItemsController = void 0;
 const common_1 = require("@nestjs/common");
 const create_item_dto_1 = require("./dto/create-item.dto");
 let ItemsController = class ItemsController {
-    findAll(req, ) {
-        console.log(req.url);
-        res.send('Hello Kassi');
+    findAll(request, response) {
+        console.log(request.url);
+        return response.send('Hello Kassi');
     }
     craeteNewPost(createItemDto) {
         return `Name : ${createItemDto.name} Desc : ${createItemDto.description}`;
@@ -27,7 +27,7 @@ let ItemsController = class ItemsController {
 __decorate([
     (0, common_1.Get)(),
     __param(0, Req()),
-    __param(1, Res(res, Response)),
+    __param(1, Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Object)

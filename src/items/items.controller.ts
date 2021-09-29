@@ -5,9 +5,9 @@ import { Request , Response } from 'express';
 @Controller('items')
 export class ItemsController {
   @Get()
-  findAll(@Req() req: Request, @Res( res: Response)) : Response{
-    console.log(req.url);
-    res.send('Hello Kassi');
+  findAll(@Req() request: Request, @Res() response: Response): Response {
+    console.log(request.url);
+    return response.send('Hello Kassi');
   }
 
   @Post()
