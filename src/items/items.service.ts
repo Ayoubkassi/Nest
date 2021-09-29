@@ -25,4 +25,14 @@ export class ItemsService {
   findOne(id : string): Item{
     return this.items.find(item => item.id === id);
   }
+
+  delete(id : string) : Item[]{
+    return this.items.filter(item => item.id !== id);
+  }
+
+  update(id : string, item : any) : Item{
+    Item oldItem = this.items.find(item => item.id === id);
+    oldItem = {...oldItem , name : item.name , description : description.name}
+    return oldItem;
+  }
 }

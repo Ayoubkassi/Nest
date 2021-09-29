@@ -31,6 +31,15 @@ let ItemsService = class ItemsService {
     findOne(id) {
         return this.items.find(item => item.id === id);
     }
+    delete(id) {
+        return this.items.filter(item => item.id !== id);
+    }
+    update(id, item) {
+        Item;
+        oldItem = this.items.find(item => item.id === id);
+        oldItem = Object.assign(Object.assign({}, oldItem), { name: item.name, description: description.name });
+        return oldItem;
+    }
 };
 ItemsService = __decorate([
     (0, common_1.Injectable)()
