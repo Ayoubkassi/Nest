@@ -21,6 +21,7 @@ export class ItemsController {
     return this.itemsService.findOne(param.id);
   }
 
+  //we can work with mongoose then we gonna have better design
 
   @Post()
   craeteNewPost(@Body() createItemDto : CreateItemDto) : string {
