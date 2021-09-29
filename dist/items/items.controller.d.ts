@@ -4,4 +4,5 @@ export declare class ItemsController {
     findOne(param: any): string;
     craeteNewPost(createItemDto: CreateItemDto): string;
     delete(id: any): string;
+    update(updateItemDto: CreateItemDto, id: any): string;
 }

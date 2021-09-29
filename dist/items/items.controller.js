@@ -28,6 +28,9 @@ let ItemsController = class ItemsController {
     delete(id) {
         return `Delete ${id}`;
     }
+    update(updateItemDto, id) {
+        return `Update ${id} - Name : ${updateItemDto.name}`;
+    }
 };
 __decorate([
     (0, common_1.Get)(),
@@ -56,6 +59,14 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", String)
 ], ItemsController.prototype, "delete", null);
+__decorate([
+    (0, common_1.Put)(':id'),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [create_item_dto_1.CreateItemDto, Object]),
+    __metadata("design:returntype", String)
+], ItemsController.prototype, "update", null);
 ItemsController = __decorate([
     (0, common_1.Controller)('items')
 ], ItemsController);
