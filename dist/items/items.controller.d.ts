@@ -1,5 +1,5 @@
+import { CreateItemDto } from './dto/craete-item.dto';
 export declare class ItemsController {
-    findAll(): {
-        items: string[];
-    };
+    findAll(): string;
+    craeteNewPost(createItemDto: CreateItemDto): string;
 }
