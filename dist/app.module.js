@@ -12,11 +12,12 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const items_controller_1 = require("./items/items.controller");
 const items_service_1 = require("./items/items.service");
+const items_module_1 = require("./items/items.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [],
+        imports: [items_module_1.ItemsModule],
         controllers: [app_controller_1.AppController, items_controller_1.ItemsController],
         providers: [app_service_1.AppService, items_service_1.ItemsService],
     })
