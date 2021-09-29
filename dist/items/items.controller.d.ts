@@ -1,6 +1,6 @@
 import { CreateItemDto } from './dto/create-item.dto';
-import { Request, Response } from 'express';
 export declare class ItemsController {
-    findAll(request: Request, response: Response): Response;
+    findAll(): string;
+    findOne(param: any): string;
     craeteNewPost(createItemDto: CreateItemDto): string;
 }
