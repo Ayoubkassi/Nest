@@ -6,20 +6,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.ItemsService = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const items_controller_1 = require("./items/items.controller");
-const items_service_1 = require("./items/items.service");
-let AppModule = class AppModule {
+let ItemsService = class ItemsService {
+    constructor() {
+        this.items = [
+            {
+                id: "124346815",
+                name: "First Item",
+                qty: 100,
+                description: "This is Item One"
+            },
+            {
+                id: "12334815",
+                name: "Second Item",
+                qty: 60,
+                description: "This is Item Two"
+            }
+        ];
+    }
+    findAll() {
+        return this.items;
+    }
 };
-AppModule = __decorate([
-    (0, common_1.Module)({
-        imports: [],
-        controllers: [app_controller_1.AppController, items_controller_1.ItemsController],
-        providers: [app_service_1.AppService, items_service_1.ItemsService],
-    })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+ItemsService = __decorate([
+    (0, common_1.Injectable)()
+], ItemsService);
+exports.ItemsService = ItemsService;
+//# sourceMappingURL=items.service.js.map

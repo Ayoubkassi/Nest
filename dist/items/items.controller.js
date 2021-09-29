@@ -15,9 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemsController = void 0;
 const common_1 = require("@nestjs/common");
 const create_item_dto_1 = require("./dto/create-item.dto");
+const items_service_1 = require("./items.service");
 let ItemsController = class ItemsController {
+    constructor(itemsService) {
+        this.itemsService = itemsService;
+    }
     findAll() {
-        return 'kassi';
+        return this.itemsService.findAll();
     }
     findOne(param) {
         return `Item ${param.id}`;
@@ -36,7 +40,7 @@ __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
+    __metadata("design:returntype", Array)
 ], ItemsController.prototype, "findAll", null);
 __decorate([
     (0, common_1.Get)(':id'),
@@ -68,7 +72,8 @@ __decorate([
     __metadata("design:returntype", String)
 ], ItemsController.prototype, "update", null);
 ItemsController = __decorate([
-    (0, common_1.Controller)('items')
+    (0, common_1.Controller)('items'),
+    __metadata("design:paramtypes", [items_service_1.ItemsService])
 ], ItemsController);
 exports.ItemsController = ItemsController;
 //# sourceMappingURL=items.controller.js.map
