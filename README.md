@@ -1,4 +1,12 @@
-## Kassi TRy Nest 
+## Kassi TRy Nest
+
+**Some Useful Commands**
+
+
+  ** Generate new controller
+  ** > nest g controller controller_name
+  ** run project
+  ** > npm run start:dev 
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
