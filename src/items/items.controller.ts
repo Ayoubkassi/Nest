@@ -1,11 +1,13 @@
 import { Controller , Get , Post , Put , Delete , Body} from '@nestjs/common';
 import {  CreateItemDto } from './dto/create-item.dto';
+import { Request , Response } from 'express';
 
 @Controller('items')
 export class ItemsController {
   @Get()
-  findAll() : string {
-    return "Ayoub Kassi 1"
+  findAll(@Req() req: Request, @Res( res: Response)) : Response{
+    console.log(req.url);
+    res.send('Hello Kassi');
   }
 
   @Post()
