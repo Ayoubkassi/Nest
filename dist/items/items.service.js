@@ -12,13 +12,13 @@ let ItemsService = class ItemsService {
     constructor() {
         this.items = [
             {
-                id: "124346815",
+                id: "1243",
                 name: "First Item",
                 qty: 100,
                 description: "This is Item One"
             },
             {
-                id: "12334815",
+                id: "1234",
                 name: "Second Item",
                 qty: 60,
                 description: "This is Item Two"
@@ -27,6 +27,9 @@ let ItemsService = class ItemsService {
     }
     findAll() {
         return this.items;
+    }
+    findOne(id) {
+        return this.items.find(item => item.id === id);
     }
 };
 ItemsService = __decorate([

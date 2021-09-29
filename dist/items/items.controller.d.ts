@@ -5,7 +5,7 @@ export declare class ItemsController {
     private readonly itemsService;
     constructor(itemsService: ItemsService);
     findAll(): Item[];
-    findOne(param: any): string;
+    findOne(param: any): Item;
     craeteNewPost(createItemDto: CreateItemDto): string;
     delete(id: any): string;
     update(updateItemDto: CreateItemDto, id: any): string;

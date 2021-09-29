@@ -24,7 +24,7 @@ let ItemsController = class ItemsController {
         return this.itemsService.findAll();
     }
     findOne(param) {
-        return `Item ${param.id}`;
+        return this.itemsService.findOne(param.id);
     }
     craeteNewPost(createItemDto) {
         return `Name : ${createItemDto.name} Desc : ${createItemDto.description}`;
@@ -47,7 +47,7 @@ __decorate([
     __param(0, (0, common_1.Param)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", String)
+    __metadata("design:returntype", Object)
 ], ItemsController.prototype, "findOne", null);
 __decorate([
     (0, common_1.Post)(),
